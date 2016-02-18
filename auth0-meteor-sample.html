@@ -11,6 +11,7 @@
 <template name="hello">
   {{#if currentUser}}
     <div>Está conectado como: <b>{{currentUser.services.auth0.name}}</b></div>
+    <div>de la empresa (lo muestra el login con GitHub): <b>{{currentUser.services.auth0.company}}</b></div>    
     <button class="logout">Log Out</button>
   {{else}}
     <button class="login">Log In</button>
