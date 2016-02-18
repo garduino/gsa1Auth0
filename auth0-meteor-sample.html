@@ -1,0 +1,18 @@
+<head>
+  <title>Ejemplo de uso de Auth0 con Meteor</title>
+</head>
+
+<body>
+  <h1>Ejemplo de uso de Auth0 con Meteor</h1>
+
+  {{> hello}}
+</body>
+
+<template name="hello">
+  {{#if currentUser}}
+    <div>Está conectado como: <b>{{currentUser.services.auth0.name}}</b></div>
+    <button class="logout">Log Out</button>
+  {{else}}
+    <button class="login">Log In</button>
+  {{/if}}
+</template>
